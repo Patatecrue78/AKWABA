@@ -1,0 +1,175 @@
+/* Définition des couleurs globales pour le site */
+:root {
+    --primary-color: #168BC0; /* Bleu clair */
+    --secondary-color: #FFFFFF; /* Blanc */
+}
+
+/* Styles globaux pour tout le corps du document */
+body {
+    font-family: Arial, sans-serif; /* Police de caractère général */
+    background-color: var(--secondary-color); /* Couleur de fond pour le corps entier */
+    font-size: 20px; /* Taille de police de base pour les grands écrans */
+}
+
+/* Styles pour l'en-tête du site */
+.header {
+    justify-content: space-between; /*Répartit l'espace entre les éléments enfants */
+    align-items: center; /* Centre les éléments verticalement */
+    background-color: var(--secondary-color); 
+    padding: 0 20px; /* Ajoute un peu d'espace sur les côtés pour éviter que les éléments ne touchent les bords */
+    display: flex; /* Utilise un affichage flexible pour les éléments enfants */  /* Centre les éléments enfants horizontalement */
+}
+
+.logo-container {
+    flex: 1; /* Prend tout l'espace disponible, poussant l'icône Instagram vers la droite */
+    display: flex;
+    justify-content: center; /* Centre le logo horizontalement */
+}
+
+
+/* Styles pour le logo */
+.logo {
+    height: 200px; /* Hauteur du logo */
+    transition: all 0.3s; /* Effet de transition pour toutes les propriétés modifiées (par exemple, sur le survol) */
+    margin: 50px; /* Espace autour du logo */
+}
+
+.instagram-icon {
+    margin-right: 20px;
+}
+
+/* Styles pour l'icône Instagram */
+.instagram-icon img {
+    height: 60px; /* Hauteur de l'icône */
+    transition: all 0.3s; /* Effet de transition pour toutes les propriétés modifiées (par exemple, sur le survol) */
+}
+
+/* Styles pour l'icône Instagram lorsqu'elle est survolée */
+.instagram-icon img:hover {
+    filter: grayscale(30%); /* Applique un filtre de désaturation de 30% lors du survol */
+}
+
+
+/* Styles pour la barre de navigation */
+nav {
+    text-align: center; /* Centre le texte des éléments enfants */
+}
+
+/* Styles pour la liste de la barre de navigation */
+nav ul {
+    display: flex; /* Utilise un affichage flexible pour les éléments enfants */
+    justify-content: center; /* Centre les éléments enfants horizontalement */
+    list-style-type: none; /* Supprime les puces devant les éléments de liste */
+    padding: 0; /* Supprime l'espacement interne */
+    gap: 200px; /* Espacement entre les éléments de liste */
+    flex-wrap: wrap; /* Permet aux éléments de la liste de passer à la ligne si nécessaire */
+}
+
+/* Styles pour les éléments de la liste de la barre de navigation */
+nav ul li {
+    margin-bottom: 40px; /* Espacement sous chaque élément de liste */
+}
+
+/* Styles pour les liens dans la barre de navigation */
+nav ul li a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: var(--secondary-color); /* Couleur du texte des liens */
+    padding: 10px 20px; /* Espace autour du texte des liens */
+    background-color: var(--primary-color); /* Couleur de fond des liens */
+    border-radius: 5px; /* Arrondit les coins des liens */
+    transition: all 0.3s; /* Effet de transition pour toutes les propriétés modifiées (par exemple, sur le survol) */
+}
+
+/* Styles pour les liens lorsqu'ils sont survolés */
+nav ul li a:hover {
+    background-color: #6fc5ec; /* Modifie la couleur de fond lors du survol */
+}
+
+/* Styles pour la section des actualités */
+.actualites {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+/* Styles pour une actualité individuelle */
+.actualite {
+    display: flex; 
+    justify-content: space-between;
+    width: calc(100% - 40px); /* Largeur totale de la page web moins les marges de 20px à gauche et à droite */
+    margin: 10px 20px; /* Marge de 20px à gauche et à droite */
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    overflow: hidden; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 10px 10px 30px; 
+}
+
+.actualite img {
+    max-width: 30%; /* L'image prendra jusqu'à 50% de la largeur de la carte d'actualité */
+    height: auto; 
+}
+
+.actualite-content {
+    padding: 20px;
+    flex-grow: 1; /* Permet au contenu de l'actualité de prendre tout l'espace disponible, en poussant l'image vers la droite */
+}
+
+.actualite:hover {
+    transform: translateY(-5px);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+
+/* Écrans de taille moyenne */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Réduire la taille de la police */
+    }
+
+    .logo {
+        height: 80px;
+        margin: 40px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav ul li {
+        margin: 0 15px 15px 15px;
+    }
+
+    .instagram-icon img {
+        height: 60px;
+        margin: 40px;
+    }
+}
+
+/* Petits écrans (mobiles) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px; /* Réduire encore la taille de la police */
+    }
+
+    .logo {
+        height: 60px;
+        margin: 20px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 0 10px 10px 10px;
+    }
+
+    .instagram-icon img {
+        height: 40px;
+        margin: 20px;
+    }
+}
