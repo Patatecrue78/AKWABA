@@ -113,6 +113,17 @@ nav ul li .active {
     background-color: rgba(0, 196, 255, 0.2); /* Un fond bleu clair semi-transparent */
 }
 
+.menu-toggle {
+    display: none; /* caché par défaut */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    outline: none;
+}
+
+
 /* Styles pour la section des actualités */
 .actualites {
     display: flex;
@@ -336,18 +347,45 @@ nav ul li .active {
 
     /* Ajustements pour la barre de navigation */
     nav ul {
-        flex-wrap: wrap;  /* Permet aux éléments de passer à la ligne si nécessaire */
-        gap: 10px;
+        display: none;
+        flex-direction: column;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .contact-socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrer les éléments horizontalement si nécessaire */
+    }
+    
+    .contact-instagram, .contact-facebook, .contact-linkedin {
+        width: 100%; /* Prendre toute la largeur */
+        margin-bottom: 15px; /* Espacement entre les éléments */
     }
     
     nav ul li {
-        flex: 1 0 calc(50% - 20px);  /* Chaque élément prend la moitié de la largeur moins 20px */
-        margin: 5px 10px;  
+        width: 100%; /* prend toute la largeur */
+        margin: 5px 0; /* ajustez comme nécessaire */
     }
 
     nav ul li a {
         padding: 8px 0;
     }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li a.active {
+        color: #ffffff; /* Changez à la couleur que vous préférez */
+        text-decoration: underline; /* Pour un simple soulignement */
+    }
+    
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }    
 
     .instagram-icon img {
         height: 30px;
@@ -377,5 +415,30 @@ nav ul li .active {
 
     .photo {
         flex: 1 1 100%;
+    }
+    
+    .menu-container {
+        display: flex;
+        justify-content: center;  /* Centre le conteneur .menu-and-title sur la page */
+        width: 100%;  /* Prend toute la largeur de son parent */
+        align-items: center;  /* Centre les éléments verticalement */
+    }    
+    
+
+    .menu-toggle {
+        display: block; 
+        border: none;
+        background: transparent;
+        font-size: 24px; /* ajustez selon vos besoins */
+        cursor: pointer;
+        margin: 0 10px;
+    }
+
+    .active-page-title {
+        font-size: 12px; 
+        color: #ffffff; /* Vous pouvez modifier la couleur selon votre préférence */
+        flex-grow: 1;  /* Prendre tout l'espace restant après .menu-toggle */
+        text-align: center;  /* Centrer le texte dans cet espace */
+        margin-right: 67px;
     }
 }
