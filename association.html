@@ -4,35 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AKWABA Solidarité</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<div class="header">
-    <img src="logo.jpg" alt="Logo AKWABA Solidarité" class="logo">
-    <a href="lien_vers_instagram" target="_blank" class="instagram-icon">
-        <img src="chemin_vers_icone_instagram.png" alt="Instagram">
-    </a>
-</div>
-
-<nav>
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="association.html">L'association</a></li>
-        <li><a href="lien_vers_autre_site" target="_blank">Nous soutenir</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<div class="actualites">
-    <!-- Ici, vous pouvez ajouter des rectangles avec des actualités -->
-    <div class="actualite">
-        <h2>Titre de l'actualité</h2>
-        <p>Description de l'actualité...</p>
+    <div class="header" data-aos="fade-down">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo AKWABA Solidarité" class="logo">
+        </div>
+        
+        <a href="https://www.instagram.com/akwabasolidarite/" target="_blank" class="instagram-icon" data-aos="fade-left">
+            <img src="instagram.jpg" alt="Instagram">
+        </a>
     </div>
-    <!-- Répétez le div "actualite" pour chaque nouvelle actualité -->
-</div>
+    
+    <nav data-aos="fade-down">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="association.html">L'association</a></li>
+            <li><a href="https://lydia-app.com/pots?id=82116-maraudes-akwaba-solidarite" target="_blank">Nous soutenir</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-<script src="scripts.js"></script>
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200,
+  });
+</script>
 </body>
 </html>

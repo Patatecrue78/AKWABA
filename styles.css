@@ -52,38 +52,49 @@ body {
 
 /* Styles pour la barre de navigation */
 nav {
-    text-align: center; /* Centre le texte des éléments enfants */
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 20px; /* Ajoute un espace en dessous de la barre de navigation */
 }
 
 /* Styles pour la liste de la barre de navigation */
 nav ul {
-    display: flex; /* Utilise un affichage flexible pour les éléments enfants */
-    justify-content: center; /* Centre les éléments enfants horizontalement */
-    list-style-type: none; /* Supprime les puces devant les éléments de liste */
-    padding: 0; /* Supprime l'espacement interne */
-    gap: 200px; /* Espacement entre les éléments de liste */
-    flex-wrap: wrap; /* Permet aux éléments de la liste de passer à la ligne si nécessaire */
+    display: flex;
+    justify-content: space-between; /* Répartit les éléments de la liste uniformément sur toute la largeur */
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Supprime la marge externe de la liste */
 }
 
 /* Styles pour les éléments de la liste de la barre de navigation */
 nav ul li {
-    margin-bottom: 40px; /* Espacement sous chaque élément de liste */
+    flex-grow: 1; /* Permet aux éléments de la liste de croître et de se partager uniformément la largeur disponible */
+    display: flex; /* Utilise un affichage flexible pour centrer le contenu des éléments de la liste */
+    justify-content: center;
+    align-items: center; /* Centre le contenu des éléments de la liste verticalement */
 }
 
 /* Styles pour les liens dans la barre de navigation */
 nav ul li a {
-    text-decoration: none; /* Supprime le soulignement des liens */
-    color: var(--secondary-color); /* Couleur du texte des liens */
-    padding: 10px 20px; /* Espace autour du texte des liens */
-    background-color: var(--primary-color); /* Couleur de fond des liens */
-    border-radius: 5px; /* Arrondit les coins des liens */
-    transition: all 0.3s; /* Effet de transition pour toutes les propriétés modifiées (par exemple, sur le survol) */
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 10px 0; /* Supprime l'espacement horizontal et utilise l'espacement vertical pour ajuster la hauteur */
+    width: 100%; /* Utilise toute la largeur de l'élément de liste parent */
+    height: 100%; /* Utilise toute la hauteur de l'élément de liste parent */
+    display: flex; /* Utilise un affichage flexible pour centrer le contenu des liens */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    border-radius: 5px;
 }
 
 /* Styles pour les liens lorsqu'ils sont survolés */
 nav ul li a:hover {
-    background-color: #6fc5ec; /* Modifie la couleur de fond lors du survol */
+    background-color: #6fc5ec;
 }
+
+
 
 /* Styles pour la section des actualités */
 .actualites {
