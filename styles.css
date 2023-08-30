@@ -148,9 +148,21 @@ nav ul li .active {
     transform: translateY(-10px) scale(1.02); /* Déplacement vers le haut avec un léger zoom */
 }
 
-.logo:hover {
-    transform: scale(1.05);
+.reservation-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #b63405;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
+
+.reservation-button:hover {
+    background-color: #b63405;
+}
+
 
 .section-title {
     font-size: 2.5em;                /* Taille de la police */
@@ -203,6 +215,70 @@ nav ul li .active {
     line-height: 1.6;
 }
 
+/* Pour la page gallerie*/ 
+
+.galerie {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacement entre les photos */
+    justify-content: center; /* Centre les photos si elles ne prennent pas toute la largeur */
+}
+
+.photo {
+    flex: 1 1 calc(25% - 10px); /* Chaque photo prendra 25% de la largeur du conteneur moins l'espacement */
+    overflow: hidden; /* Cache les débordements, utile si les images n'ont pas toutes le même ratio */
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* Effet zoom au survol */
+}
+
+
+.photo:hover img {
+    transform: scale(1.1); /* Zoom sur l'image au survol */
+}
+
+/* Pour la page Contact */
+
+.contact-socials {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espace entre les logos */
+}
+
+.social-icon-large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.social-image-large {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.social-icon-large span {
+    font-size: 1.5rem;
+    color: #ff4500;
+    font-weight: 600;
+}
+
+.contact-facebook .social-icon-large span {
+    color: #1877f2; /* Couleur Facebook */
+}
+
+.contact-linkedin .social-icon-large span {
+    color: #0077b5; /* Couleur LinkedIn */
+}
+
 /* Écrans de taille moyenne */
 @media (max-width: 768px) {
     body {
@@ -241,42 +317,65 @@ nav ul li .active {
         margin-top: 30px;
         margin-bottom: 20px;
     }
+
+    .photo {
+        flex: 1 1 calc(50% - 10px);
+    }
 }
 
 /* Petits écrans (mobiles) */
 @media (max-width: 480px) {
     body {
-        font-size: 12px; /* Réduire encore la taille de la police */
+        font-size: 12px; 
     }
 
     .logo {
-        height: 60px;
-        margin: 20px;
+        height: 50px; 
+        margin: 15px 10px;
     }
 
+    /* Ajustements pour la barre de navigation */
     nav ul {
+        flex-wrap: wrap;  /* Permet aux éléments de passer à la ligne si nécessaire */
         gap: 10px;
     }
-
+    
     nav ul li {
-        margin: 0 10px 10px 10px;
+        flex: 1 0 calc(50% - 20px);  /* Chaque élément prend la moitié de la largeur moins 20px */
+        margin: 5px 10px;  
+    }
+
+    nav ul li a {
+        padding: 8px 0;
     }
 
     .instagram-icon img {
-        height: 40px;
-        margin: 20px;
+        height: 30px;
+        margin: 15px;
     }
 
     .section-title {
-        font-size: 1.5em;        /* Réduisez davantage la taille de la police pour les petits écrans */
+        font-size: 1.5em;
         margin-top: 20px;
         margin-bottom: 15px;
     }
 
-    /* Si la décoration sous le titre est trop grande pour les petits écrans, ajustez ou masquez-la */
     .section-title:after {
-        width: 40px;             /* Réduisez la largeur */
-        height: 2px;             /* Réduisez la hauteur */
-        bottom: -8px;            /* Ajustez le positionnement */
+        width: 30px;
+        height: 2px;
+        bottom: -6px;
+    }
+
+    .actualite {
+        margin: 10px 10px;
+        padding: 8px 8px 8px 20px; 
+    }
+
+    .actualite img {
+        margin-top: 10px;
+    }
+
+    .photo {
+        flex: 1 1 100%;
     }
 }
