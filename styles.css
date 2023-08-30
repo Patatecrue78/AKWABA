@@ -6,7 +6,7 @@
 
 /* Styles globaux pour tout le corps du document */
 body {
-    font-family: Arial, sans-serif; /* Police de caractère général */
+    font-family: 'Poppins', Arial, sans-serif; /* Police de caractère général */
     background-color: var(--secondary-color); /* Couleur de fond pour le corps entier */
     font-size: 20px; /* Taille de police de base pour les grands écrans */
 }
@@ -32,6 +32,10 @@ body {
     height: 200px; /* Hauteur du logo */
     transition: all 0.3s; /* Effet de transition pour toutes les propriétés modifiées (par exemple, sur le survol) */
     margin: 50px; /* Espace autour du logo */
+}
+
+.logo:hover {
+    transform: rotate(10deg) scale(1.05);
 }
 
 .instagram-icon {
@@ -91,9 +95,9 @@ nav ul li a {
 
 /* Styles pour les liens lorsqu'ils sont survolés */
 nav ul li a:hover {
-    background-color: #6fc5ec;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparence pour un effet doux */
+    transform: scale(1.1); /* Effet zoom */
 }
-
 
 
 /* Styles pour la section des actualités */
@@ -122,18 +126,23 @@ nav ul li a:hover {
 }
 
 .actualite-content {
-    padding: 20px;
+    padding: 30px;
     flex-grow: 1; /* Permet au contenu de l'actualité de prendre tout l'espace disponible, en poussant l'image vers la droite */
 }
 
 .actualite:hover {
-    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Ombre portée plus prononcée */
+    transform: translateY(-10px) scale(1.02); /* Déplacement vers le haut avec un léger zoom */
 }
 
 .logo:hover {
     transform: scale(1.05);
 }
 
+
+* {
+    transition: all 0.3s;
+}
 
 /* Écrans de taille moyenne */
 @media (max-width: 768px) {
@@ -157,6 +166,15 @@ nav ul li a:hover {
     .instagram-icon img {
         height: 60px;
         margin: 40px;
+    }
+
+    .actualite {
+        flex-direction: column; /* Les images des actualités se positionnent au-dessus du contenu sur les écrans moyens */
+    }
+
+    .actualite img {
+        max-width: 100%; /* L'image prend toute la largeur sur les écrans moyens */
+        margin-top: 15px; /* Espace au-dessus de l'image */
     }
 }
 
