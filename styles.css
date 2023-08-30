@@ -26,7 +26,6 @@ body {
     justify-content: center; /* Centre le logo horizontalement */
 }
 
-
 /* Styles pour le logo */
 .logo {
     height: 200px; /* Hauteur du logo */
@@ -52,7 +51,6 @@ body {
 .instagram-icon img:hover {
     filter: grayscale(30%); /* Applique un filtre de désaturation de 30% lors du survol */
 }
-
 
 /* Styles pour la barre de navigation */
 nav {
@@ -99,7 +97,6 @@ nav ul li a:hover {
     transform: scale(1.1); /* Effet zoom */
 }
 
-
 /* Styles pour la section des actualités */
 .actualites {
     display: flex;
@@ -139,6 +136,26 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+.section-title {
+    font-size: 2.5em;                /* Taille de la police */
+    text-align: center;              /* Centrer le texte */
+    margin-top: 50px;                /* Espace au-dessus du titre */
+    margin-bottom: 50px;            /* Espace en dessous du titre */
+    position: relative;             /* Pour positionner des éléments par rapport à ce titre si nécessaire */
+    color: #333;                    /* Couleur du texte */
+
+    /* Si vous voulez un effet décoratif sous le titre, comme une ligne */
+    &:after {
+        content: "";                /* Contenu vide pour un élément purement décoratif */
+        width: 50px;                /* Largeur de la ligne */
+        height: 3px;                /* Hauteur de la ligne */
+        background-color: #168BC0;; /* Couleur de la ligne */
+        position: absolute;         /* Positionnement par rapport au titre */
+        bottom: -10px;              /* Positionnement sous le titre */
+        left: 50%;                  /* Centrer horizontalement */
+        transform: translateX(-50%); /* Ajustement pour un centrage parfait */
+    }
+}
 
 * {
     transition: all 0.3s;
