@@ -290,6 +290,10 @@ nav ul li .active {
     color: #0077b5; /* Couleur LinkedIn */
 }
 
+.active-page-title {
+    display: none;
+}
+
 /* Écrans de taille moyenne */
 @media (max-width: 768px) {
     body {
