@@ -244,6 +244,30 @@ nav ul li .active {
     }
 }
 
+.btn-reserve {
+    display: inline-block;   /* Pour pouvoir centrer le bouton */
+    padding: 15px 30px;     /* Espacement intérieur */
+    margin: 30px auto;      /* Espacement extérieur */
+    background-color: #b63405; /* Couleur d'arrière-plan gris foncé */
+    color: #fff;            /* Couleur du texte blanc */
+    text-transform: uppercase;  /* Texte en majuscules */
+    font-weight: bold;      /* Texte en gras */
+    border: none;           /* Pas de bordures */
+    border-radius: 5px;    /* Coins arrondis */
+    cursor: pointer;        /* Style de curseur */
+    transition: background-color 0.3s; /* Transition douce */
+    text-decoration: none; /* Pas de soulignement */
+    font-size: 1rem;       /* Taille de police */
+}
+
+.btn-reserve:hover {
+    background-color: #b6340593; /* Une couleur d'arrière-plan plus foncée lors du survol */
+}
+
+.button-container {
+    text-align: center;
+}
+
 .akwababynight-section-title {
     font-size: 3em;                  /* Taille de police plus grande */
     background-color: #168BC0;         /* Bande noire pour le fond */
