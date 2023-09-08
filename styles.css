@@ -123,8 +123,6 @@ nav ul li .active {
     outline: none;
 }
 
-
-/* Styles pour la section des actualités */
 .actualites {
     display: flex;
     flex-direction: column; 
@@ -158,6 +156,56 @@ nav ul li .active {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Ombre portée plus prononcée */
     transform: translateY(-10px) scale(1.02); /* Déplacement vers le haut avec un léger zoom */
 }
+
+/* Styles pour la section des actualités */
+.actualites-akwa3 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;  
+}
+
+.actualite-akwa3 {
+    width: 100%;  
+    margin: 20px 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    overflow: hidden; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; 
+}
+
+/* Pour la grille d'images seulement */
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+}
+
+.actualite-akwa3 img {
+    width: 50%;  
+    height: auto;  
+    border-radius: 5px;
+    margin: auto;
+}
+
+.single-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / span 3;
+    height: 100%; /* Pour occuper tout l'espace disponible */
+}
+
+.single-image img {
+    max-width: calc(33.33% - 15px); /* Ajustement pour correspondre à la taille des autres images (en tenant compte de l'espacement) */
+}
+.actualite-akwa3:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px) scale(1.02);
+}
+
 
 .reservation-button {
     display: inline-block;
@@ -194,6 +242,16 @@ nav ul li .active {
         left: 50%;                  /* Centrer horizontalement */
         transform: translateX(-50%); /* Ajustement pour un centrage parfait */
     }
+}
+
+.akwababynight-section-title {
+    font-size: 3em;                  /* Taille de police plus grande */
+    background-color: #168BC0;         /* Bande noire pour le fond */
+    color: #fff;                    /* Texte en blanc */
+    padding: 10px 10px;                /* Espacement interne pour la bande */
+    width: fit-content;             /* La largeur s'ajuste en fonction du contenu */
+    margin: 0 auto;                 /* Centrage horizontal */
+    border-radius: 8px;             /* Coins arrondis, optionnel */
 }
 
 * {
